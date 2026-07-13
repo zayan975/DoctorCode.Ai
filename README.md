@@ -32,14 +32,38 @@ Built to demonstrate real-world full-stack engineering: secure authentication, p
 | Feature | Description |
 |---|---|
 | 🔍 **AI Code Review** | Structured analysis across 5 dimensions: overall quality, security, performance, readability, best practices |
-| 🐛 **Severity-Tagged Issues** | Every bug/vulnerability flagged as `critical`, `high`, `medium`, or `low` with exact line numbers |
+| 🐛 **Bug Detection** | Every bug/vulnerability flagged as `critical`, `high`, `medium`, or `low` with exact line numbers |
+| 🔒 **Security Analysis** | Identifies vulnerabilities like unsafe function calls, injection risks, and unsafe patterns |
+| ⚡ **Performance Optimization** | Highlights inefficient logic (e.g. nested loops, redundant operations) with concrete fixes |
+| 📖 **Best Practices Recommendations** | Flags outdated syntax and anti-patterns, suggests modern alternatives |
+| 🧹 **Readability Improvements** | Suggests cleaner, more maintainable code structure |
 | ✨ **Optimized Code Generation** | Side-by-side comparison — your original code vs. AI-rewritten, production-ready version |
+| 📊 **Code Quality Scoring** | Numeric score across overall quality, security, performance, readability, and best practices |
 | 📝 **Multi-Language Support** | Framework-aware reviews across 14 languages, dynamically injected into the AI prompt |
 | 🕘 **Review History** | Every review persisted to MongoDB, tied to the authenticated user, browsable anytime |
+| 🔍 **Detailed Review Reports** | View full breakdown of any past review — bugs, fixes, explanation, and scores |
 | 🔐 **Secure Authentication** | JWT-based auth with HTTP-only cookies — no tokens exposed to client-side JS |
-| 🎨 **Dark / Light Mode** | Full theme system using CSS variables, persisted across sessions |
+| 🌙 **Dark & Light Mode** | Full theme system, persisted across sessions |
 | ⚡ **Live Code Editor** | Integrated Monaco Editor (the engine behind VS Code) with syntax highlighting & language selection |
 | 📱 **Fully Responsive** | Mobile-first design across every page — dashboard, history, auth flows |
+
+---
+
+## 🚀 How It Works
+
+1. Create an account or log in.
+2. Paste your source code.
+3. Select the programming language.
+4. Submit your code for review.
+5. Receive:
+   * Bug Analysis
+   * Security Suggestions
+   * Performance Improvements
+   * Best Practices
+   * Optimized Code
+   * AI Explanation
+   * Overall Quality Score
+6. Access your review history anytime.
 
 ---
 
@@ -51,7 +75,6 @@ Built to demonstrate real-world full-stack engineering: secure authentication, p
 - Monaco Editor
 - React Router
 - Axios
-  
 
 **Backend**
 - Node.js + Express
@@ -133,9 +156,21 @@ The app will be running at `http://localhost:5173` (frontend) and `http://localh
 - Designing and consuming a REST API from scratch (auth, CRUD, third-party AI integration)
 - Secure, production-style authentication (HTTP-only cookies, not localStorage tokens)
 - Prompt engineering for reliable, structured LLM output (JSON schema enforcement)
-- Global state management without over-engineering (Context API for auth/theme)
-- Debugging real production issues: CORS, JWT payload mismatches, API rate-limit handling, responsive layout bugs
+- Debugging real production issues: CORS, JWT payload mismatches, responsive layout bugs
 - Clean Git workflow and project structure for a full-stack monorepo
+
+---
+
+## 🗺️ Roadmap
+
+Planned features for upcoming releases:
+
+- [ ] Team/organization workspaces for collaborative reviews
+- [ ] GitHub repo integration — review entire PRs automatically
+- [ ] AI chat follow-up on review results ("why is this a bug?")
+- [ ] Export reviews as PDF reports
+- [ ] Support for more languages (Kotlin, Swift, Rust)
+- [ ] VS Code extension
 
 ---
 
@@ -145,8 +180,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub. Your support helps the project reach more developers and motivates future improvements.
+
+---
+
 <div align="center">
 
-Built with ❤️ by [Stark](https://github.com/zayan975)
+Built with ❤️ by [M.Zayan](https://github.com/zayan975)
 
 </div>
