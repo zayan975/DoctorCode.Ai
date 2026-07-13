@@ -43,7 +43,6 @@ Built to demonstrate real-world full-stack engineering: secure authentication, p
 | 🕘 **Review History** | Every review persisted to MongoDB, tied to the authenticated user, browsable anytime |
 | 🔍 **Detailed Review Reports** | View full breakdown of any past review — bugs, fixes, explanation, and scores |
 | 🔐 **Secure Authentication** | JWT-based auth with HTTP-only cookies — no tokens exposed to client-side JS |
-| 🌙 **Dark & Light Mode** | Full theme system, persisted across sessions |
 | ⚡ **Live Code Editor** | Integrated Monaco Editor (the engine behind VS Code) with syntax highlighting & language selection |
 | 📱 **Fully Responsive** | Mobile-first design across every page — dashboard, history, auth flows |
 
@@ -101,7 +100,6 @@ Built to demonstrate real-world full-stack engineering: secure authentication, p
 | `POST` | `/api/user/register` | Register a new user |
 | `POST` | `/api/user/login` | Authenticate & set JWT cookie |
 | `POST` | `/api/user/logout` | Clear auth cookie |
-| `GET` | `/api/user/me` | Get current authenticated user |
 | `POST` | `/api/reviews` | Submit code for AI review |
 | `GET` | `/api/reviews` | Get all reviews for logged-in user |
 | `GET` | `/api/reviews/:id` | Get a single review by ID |
@@ -133,6 +131,7 @@ Create a `.env` file in `Backend/`:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=your_gemini_model
 PORT=5000
 ```
 
@@ -165,14 +164,14 @@ The app will be running at `http://localhost:5173` (frontend) and `http://localh
 
 Planned features for upcoming releases:
 
+- [ ] **Upgraded Plans** — Pro/premium tiers with higher usage limits and advanced review depth
+- [ ] **More Language Support** — Expanding beyond current 14 to include Kotlin, Swift, Rust, and more
+- [ ] **AI Chat Assistant** — Ask follow-up questions directly about your review ("why is this a bug?", "explain this fix")
+- [ ] **CI/CD Integration** — Automatically review code on every push/PR via GitHub Actions & other pipelines
 - [ ] Team/organization workspaces for collaborative reviews
 - [ ] GitHub repo integration — review entire PRs automatically
-- [ ] AI chat follow-up on review results ("why is this a bug?")
 - [ ] Export reviews as PDF reports
-- [ ] Support for more languages (Kotlin, Swift, Rust)
 - [ ] VS Code extension
-
----
 
 ## 📄 License
 
