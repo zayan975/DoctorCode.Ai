@@ -1,4 +1,5 @@
 const express = require("express");
+require('dotenv').config();
 const UserRoute = require("../src/routes/user.route");
 const cookieParser = require("cookie-parser");
 const reviewRoute = require("../src/routes/review.route");
@@ -8,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://doctor-code-ai.vercel.app/",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   }),
 );
