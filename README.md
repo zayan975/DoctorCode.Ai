@@ -13,7 +13,13 @@ Instant, intelligent code analysis that catches bugs, security vulnerabilities, 
 [![Gemini AI](https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
+**[🌐 Live Demo](https://doctor-code-ai.vercel.app)** · **[📂 Repository](https://github.com/zayan975/DoctorCode.Ai)**
+
 </div>
+
+---
+
+> ⚠️ **Note:** The backend is hosted on Render's free tier, so the first request after a period of inactivity may take 30-60 seconds to spin up (cold start). Subsequent requests will be fast.
 
 ---
 
@@ -24,6 +30,24 @@ Instant, intelligent code analysis that catches bugs, security vulnerabilities, 
 Unlike traditional linters that only catch syntax errors, DoctorCode AI understands *intent and context* — powered by Google's Gemini AI and a custom-built prompt engineering system spanning **14 programming languages and frameworks**.
 
 Built to demonstrate real-world full-stack engineering: secure authentication, persistent history, clean state management, responsive UI, and thoughtful UX — not just a CRUD app.
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+| Dashboard | AI Review Results |
+|---|---|
+| ![Dashboard](./) | ![Review Results](./screenshots/review-results.png) |
+
+| Code Editor | Review History |
+|---|---|
+| ![Code Editor](./screenshots/code-editor.png) | ![Review History](./screenshots/history.png) |
+
+</div>
+
+> 📁 Add your screenshots to a `/screenshots` folder in the repo root, matching the filenames above (or update the paths to match your own).
 
 ---
 
@@ -81,6 +105,10 @@ Built to demonstrate real-world full-stack engineering: secure authentication, p
 - JWT (HTTP-only cookie auth)
 - Google Gemini API
 
+**Deployment**
+- Frontend hosted on [Vercel](https://vercel.com)
+- Backend hosted on [Render](https://render.com)
+
 **Architecture Highlights**
 - RESTful API design with clean separation of controllers, services, and routes
 - Custom prompt engineering layer (`FRAMEWORK_CONTEXT` map) for language-specific AI review accuracy
@@ -133,6 +161,7 @@ JWT_SECRET=your_jwt_secret
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=your_gemini_model
 PORT=5000
+FRONTEND_URL=http://localhost:5173
 ```
 
 ```bash
@@ -143,6 +172,14 @@ npm start
 ```bash
 cd ../doctercode.ai
 npm install
+```
+
+Create a `.env` file in `doctercode.ai/`:
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+```bash
 npm run dev
 ```
 
@@ -156,6 +193,7 @@ The app will be running at `http://localhost:5173` (frontend) and `http://localh
 - Secure, production-style authentication (HTTP-only cookies, not localStorage tokens)
 - Prompt engineering for reliable, structured LLM output (JSON schema enforcement)
 - Debugging real production issues: CORS, JWT payload mismatches, responsive layout bugs
+- End-to-end deployment across separate hosting providers (Vercel + Render), including cross-domain cookie auth and CORS configuration
 - Clean Git workflow and project structure for a full-stack monorepo
 
 ---
