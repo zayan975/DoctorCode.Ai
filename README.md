@@ -33,23 +33,6 @@ Built to demonstrate real-world full-stack engineering: secure authentication, p
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-| Dashboard | AI Review Results |
-|---|---|
-| ![Dashboard](./) | ![Review Results](./screenshots/review-results.png) |
-
-| Code Editor | Review History |
-|---|---|
-| ![Code Editor](./screenshots/code-editor.png) | ![Review History](./screenshots/history.png) |
-
-</div>
-
-> 📁 Add your screenshots to a `/screenshots` folder in the repo root, matching the filenames above (or update the paths to match your own).
-
----
 
 ## ✨ Key Features
 
